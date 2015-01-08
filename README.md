@@ -11,7 +11,8 @@ go to the R console:
     runGitHub( "reactiveStock", "syzer") 
     
 
-or clone repository
+or clone repository:
+
     git clone git@github.com:syzer/reactiveStock.git
 
 and in the R console:
