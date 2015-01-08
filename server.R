@@ -20,7 +20,8 @@ shinyServer(function(input, output) {
   
   output$plot <- renderPlot({
     chartSeries(finalInput(), theme = chartTheme("white"), 
-                type = "line", log.scale = input$log, TA = NULL)
+                type = "line", log.scale = input$log, 
+                TA = NULL, name = paste("value of ",input$symb))
   })
 })
 

@@ -1,18 +1,23 @@
 library(shiny)
 
 shinyUI(fluidPage(
-  titlePanel("stockVis"),
+  titlePanel("Reactive Stock Visualization"),
   
   sidebarLayout(
     sidebarPanel(
-      helpText("Select a stock to examine. 
-        Information will be collected from yahoo finance."),
+      helpText("Loads data from yahoo finance."),
     
-      textInput("symb", "Symbol", "SPY"),
+      #textInput("symb", "Symbol", "SPY"),
+      selectInput("symb", 
+                  label = "Choose a company to display",
+                  choices = c("IBM", "GOOG",
+                              "YHOO", "SPY"),
+                  selected = "IBM"),
+      
     
       dateRangeInput("dates", 
         "Date range",
-        start = "2013-01-01", 
+        start = "2014-01-01", 
         end = as.character(Sys.Date())),
    
       actionButton("get", "Get Stock"),
@@ -20,11 +25,9 @@ shinyUI(fluidPage(
       br(),
       br(),
       
-      checkboxInput("log", "Plot y axis on log scale", 
-        value = FALSE),
+      checkboxInput("log", "y - Use log scale", value = FALSE),
       
-      checkboxInput("adjust", 
-        "Adjust prices for inflation", value = FALSE)
+      checkboxInput("adjust", "Adjust prices for inflation", value = FALSE)
     ),
     
     mainPanel(plotOutput("plot"))
