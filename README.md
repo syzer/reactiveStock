@@ -10,6 +10,7 @@ R 3.1.2+ required
 go to the R console:
 
     install.packages("shiny")
+    library('shiny')
     runGitHub( "reactiveStock", "syzer") 
     
 
@@ -20,4 +21,4 @@ or clone repository:
 and in the R console:
 
     library('shiny')
-    runApp('./')
+    runApp('reactiveStock')
