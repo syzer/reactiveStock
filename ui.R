@@ -9,10 +9,9 @@ shinyUI(fluidPage(
     
       #textInput("symb", "Symbol", "SPY"),
       selectInput("symb", 
-                  label = "Choose a company to display",
-                  choices = c("IBM", "GOOG",
-                              "YHOO", "SPY"),
-                  selected = "IBM"),
+                  label = "Choose a stock to display",
+                  choices = c("GOLD","IBM", "GOOG", "YHOO", "SPY"),
+                  selected = "GOLD"),
       
     
       dateRangeInput("dates", 
