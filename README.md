@@ -3,7 +3,7 @@ Just an example of reactive data visualization server done in R
 reactive({}) - caches hash-map input:output, and gives cachces output if encounters same input more than onece (no need to recalulate!).
 
 ## DEMO
-![demoImage](https://raw.github.com/syzer/reactiveStock/wiki/demo.png)
+![demoImage](https://raw.githubusercontent.com/syzer/reactiveStock/master/wiki/demo.png)
 
 
 ## HOWTO
